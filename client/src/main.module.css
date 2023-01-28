@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    /* create a square with 30px of width and 30px of heigth and background color red */
+    width: 5px;
+    height: 80px;
+    background-color: red;
+}
+
+.giro90 {
+    /* rotate the element 90 degrees */
+    transform: rotate(45deg);
+}

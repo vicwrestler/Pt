@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.video_control {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sensores {
+    /* position: relative; */
+    width: 40%;
+    height: 100%;
+    /* background-image: url("./img/auto.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* border: 1px solid red; */
+}
+
+.imgVideo img {
+    width: 500px;
+    /* height: 100%; */
+}
+
+.controles {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.control {
+    width: 80px;
+    height: 80px;
+    background-color: gray;
+}
+
+.arriba {
+    clip-path: polygon(51% 0, 0 100%, 100% 100%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 1.2s;
+}
+
+.derecha {
+    clip-path: polygon(0 0, 0 100%, 100% 53%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.abajo {
+    clip-path: polygon(0 0, 51% 100%, 100% 0);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.izquierda {
+    clip-path: polygon(0 49%, 100% 100%, 100% 0);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.control:hover {
+    background-color: rgba(6, 21, 228, 0.521);
+    border: 1px solid black;
+    scale: 1.2;
+}
+
+.sensor {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
+
+.sensor1 {
+    position: absolute;
+    top: 100px;
+    left: 75px;
+}
+
+.sensor2 {
+    top: 68px;
+    left: 177px;
+    position: absolute;
+}
+
+.sensor3 {
+    top: 100px;
+    left: 280px;
+    position: absolute;
+}
+
+.sensor4 {
+    bottom: 75px;
+    left: 75px;
+    position: absolute;
+}
+
+.sensor5 {
+    bottom: 40px;
+    left: 177px;
+    position: absolute;
+}
+
+.sensor6 {
+    bottom: 75px;
+    left: 280px;
+    position: absolute;
+}
+
+.velocidad {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 150px;
+}
+
+.distancia {
+    font-size: 2em;
+    position: absolute;
+    top: 25px;
+    left: 390px;
+}
+
+.barradist {
+    background-color: rgb(42, 42, 255);
+    width: 200px;
+    height: 5px;
+}
+
+.barradist1 {
+    position: absolute;
+    top: 10px;
+    left: 103px;
+}
+
+.barradist2 {
+    position: absolute;
+    top: 30px;
+    left: 103px;
+}
+
+.barradist3 {
+    position: absolute;
+    top: 50px;
+    left: 103px;
+}
+
+.encendido {
+    background-color: red;
+}
+
+.apagado {
+    background-color: transparent;
+}
+
+.baMos {
+    opacity: 1;
+}
+
+.baDes {
+    opacity: 0;
+    /* display: none; */
+}
