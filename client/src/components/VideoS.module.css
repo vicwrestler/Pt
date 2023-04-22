@@ -1,10 +1,14 @@
 .videoS {
-    /* genera un borde con los colores degradados */
     width: 30%;
-    border: 1px solid #000;
+    height: 300px;
     border-image: linear-gradient(to right, #000, #fff) 1;
-    /* borde redondeado */
     border-radius: 10px;
-    /* borde con sombra */
     box-shadow: 0 0 10px #000;
+    /* margin-left: 20px;
+    margin-top: 20px; */
+    display: flex;
+}
+
+.videoS img {
+    width: 100%;
 }

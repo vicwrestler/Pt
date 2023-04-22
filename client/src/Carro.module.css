@@ -41,51 +41,6 @@
     margin-top: 50px;
 }
 
-.control {
-    width: 80px;
-    height: 80px;
-    background-color: gray;
-}
-
-.arriba {
-    clip-path: polygon(51% 0, 0 100%, 100% 100%);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: transform 1.2s;
-}
-
-.derecha {
-    clip-path: polygon(0 0, 0 100%, 100% 53%);
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-
-.abajo {
-    clip-path: polygon(0 0, 51% 100%, 100% 0);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.izquierda {
-    clip-path: polygon(0 49%, 100% 100%, 100% 0);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.control:hover {
-    background-color: rgba(6, 21, 228, 0.521);
-    border: 1px solid black;
-    scale: 1.2;
-}
-
 .sensor {
     width: 50px;
     height: 50px;

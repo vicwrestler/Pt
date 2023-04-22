@@ -52,7 +52,7 @@ io.on("connect", (socket) => {
     // console.log(socket.id);
     socket.on("estado", (data) => {
         // console.log(data);
-        arreglo.fill
+        // arreglo.fill
         arreglo[data.angulo] = data.distancia;
         if (data.angulo == 23) {
             data = {...data, "arreglo": arreglo };
@@ -88,7 +88,7 @@ app.get("/info", (req, res) => {
     res.json(datos);
 });
 
-io.listen(3000);
+// io.listen(3000);
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
