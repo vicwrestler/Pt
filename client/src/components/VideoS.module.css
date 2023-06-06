@@ -1,4 +1,6 @@
 .videoS {
+    margin-left: 20px;
+    margin-top: 10px;
     width: 30%;
     height: 300px;
     border-image: linear-gradient(to right, #000, #fff) 1;

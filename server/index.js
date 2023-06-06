@@ -49,10 +49,7 @@ const io = new socketServer(server, {
  */
 io.on("connect", (socket) => {
     console.log("new connection");
-    // console.log(socket.id);
     socket.on("estado", (data) => {
-        // console.log(data);
-        // arreglo.fill
         arreglo[data.angulo] = data.distancia;
         if (data.angulo == 23) {
             data = {...data, "arreglo": arreglo };

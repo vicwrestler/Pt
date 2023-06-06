@@ -1,3 +1,9 @@
+.canva{
+    position: absolute;
+    right: 10rem;
+    top: 9rem;
+    
+}
 .canvas {
     background-image: url("../img/auto.png");
     background-repeat: no-repeat;
@@ -5,4 +11,66 @@
     background-size: 300px 500px;
     /* width: 100%; */
     /* height: 98vh; */
+}
+.sensor {
+    /* z-index: 1000; */
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    background-color: aqua;
+    position: absolute;
+}
+.sensor1 {
+    top: 43px;
+    left: 135px;
+}
+
+.sensor2 {
+    top: 21px;
+    left: 210px;
+    
+}
+
+.sensor3 {
+    top: 43px;
+    left: 277px;
+    
+}
+
+.sensor4 {
+    bottom: 50px;
+    left: 135px;
+    
+}
+
+.sensor5 {
+    bottom: 40px;
+    left: 210px;
+    
+}
+
+.sensor6 {
+    bottom: 50px;
+    left: 277px;
+    
+}
+.velocidad {
+    font-size: .8em;
+    position: absolute;
+    top: 50%;
+    left: 150px;
+}
+
+.distancia {
+    font-size: 1em;
+    position: absolute;
+    top: 25px;
+    left: 390px;
+}
+.encendido {
+    background-color: red;
+}
+
+.apagado {
+    background-color: transparent;
 }
