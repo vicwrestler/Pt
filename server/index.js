@@ -54,11 +54,11 @@ io.on("connect", (socket) => {
         if (data.angulo == 23) {
             data = {...data, "arreglo": arreglo };
         }
-        console.log(data);
+        // console.log(data);
         io.emit("message", data);
     });
     socket.on("control", (data) => {
-        console.log(data);
+        // console.log(data);
         io.emit("control", data);
     });
     // tiempo(socket);

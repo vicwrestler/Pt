@@ -66,14 +66,17 @@ const datosServidor = {
     21, 22,
   ],
 };
-// function Canva({ datosServidor }) {
-function Canva() {
+function Canva({ datosServidor }) {
+// function Canva() {
+
   const canvasRef = useRef(null);
   const [datos, setDatos] = useState(datosServidor);
   const [arreglo, setArreglo] = useState(datosServidor.arreglo);
   useEffect(() => {
+
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
+    console.log(datosServidor);
     
     dibujaSegmento(context, datosServidor.angulo, datosServidor.distancia);
   }, []);
