@@ -7,3 +7,4 @@ clientnode/
 client/node_modules/
 client/auto.mp4
 .idea/
+.vscode/arduino.json

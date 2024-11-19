@@ -8,13 +8,13 @@ import CabeceraP from './components/CabeceraP';
 import PiePag from './components/PiePag';
 import VideoS from './components/VideoS';
 import ControlA from './components/ControlA';
-const socket = io("http://localhost:6660");
 
 
-
+const socket = io("http://localhost:6660");// Se prueba el crearlo desde fuera del componente, si no funciona entonces descomentar la linea 15 (originalmente estaba activada)
 function Carro() {
-    const [data, setData] = useState({ velocidad: 0, distancia: 220, sensores: [1, 1, 0, 0, 1, 0], angulo: 0 });
-    
+    // const socket = io("http://localhost:6660");
+    const [data, setData] = useState({ velocidad: 10, distancia: 210, sensores: [0, 0, 0, 0, 0, 0], angulo: 7 });
+    // const [data, setData] = useState(null);
     const [camara, setCamara] = useState(auto);
     const [dataSensores, setDataSensores] = useState(null);
     

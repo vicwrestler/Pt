@@ -5,7 +5,7 @@ function ControlA({data}) {
   const [socket, setSocket] = useState(null);
   useEffect(() => {
     if (data) setSocket(data);
-    else console.error("No se ha recibido el socket");
+    else console.log("No se ha recibido el socket");
   }, [data]);
   useEffect(() => {
     document.addEventListener("keydown", (e) => {

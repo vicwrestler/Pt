@@ -88,7 +88,7 @@ function Canva({ datosServidor }) {
       <canvas
         ref={canvasRef}
         className={style.canvas}
-        // style={}
+        //style={}
         width={450}
         height={500}
       ></canvas>
