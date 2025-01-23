@@ -1,54 +1,47 @@
-.ControlA {
+.ControlA{
     border: 1px solid black;
     width: 30%;
     height: 270px;
-    position: relative;
     z-index: 10;
     margin-top: 10px;
     margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 10px;
+    max-width: 300px;
 }
-
 .control {
-    width: 80px;
-    height: 80px;
+    border: none;
+    cursor: pointer;
     background-color: gray;
+    transition: background-color 0.5s;
 }
 
 .arriba {
+    grid-column: 2;
+    grid-row: 1;
     clip-path: polygon(51% 0, 0 100%, 100% 100%);
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: transform 1.2s;
 }
-
 .derecha {
+    grid-column: 3;
+    grid-row: 2;
     clip-path: polygon(0 0, 0 100%, 100% 53%);
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    transform: translateY(-50%);
 }
-
 .abajo {
+    grid-column: 2;
+    grid-row: 3;
     clip-path: polygon(0 0, 51% 100%, 100% 0);
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
 }
-
 .izquierda {
+    grid-column: 1;
+    grid-row: 2;
     clip-path: polygon(0 49%, 100% 100%, 100% 0);
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
 }
-
 .control:hover {
     background-color: rgba(6, 21, 228, 0.521);
     border: 1px solid black;
-    scale: 1.2;
+    z-index: 20;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra */
 }

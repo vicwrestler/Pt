@@ -50,15 +50,22 @@ const io = new socketServer(server, {
 io.on("connect", (socket) => {
     console.log("new connection");
     socket.on("estado", (data) => {
+        if(typeof data === "string"){
+            data = JSON.parse(data);
+        }
+        let datosAEnviar = {...data };
         arreglo[data.angulo] = data.distancia;
         if (data.angulo == 23) {
-            data = {...data, "arreglo": arreglo };
+            datosAEnviar = {...datosAEnviar, "arreglo": arreglo };
         }
-        console.log(data);
-        io.emit("message", data);
+        // if (data.angulo == 23) {
+        //     data = {...data, "arreglo": arreglo };
+        // }
+        // console.log(data);
+        io.emit("message", datosAEnviar);
     });
     socket.on("control", (data) => {
-        // console.log(data);
+        console.log(data);
         io.emit("control", data);
     });
     // tiempo(socket);

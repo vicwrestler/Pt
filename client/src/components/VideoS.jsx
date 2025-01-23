@@ -1,21 +1,17 @@
-import { useState, useEffect } from 'react';
-import auto from '../../src/img/camara.jpg';
-import style from './VideoS.module.css'
-export default function VideoS({data}) {
-    const [camara, setCamara] = useState('');
-    useEffect(() => {
-      // console.log(data)
-        // if(data.length>0){
-        //   setCamara(data);
-        //   console.log("entro")
-        // }
-        // else
-        //     setCamara(auto);
-        setCamara(data);
-    }, [data]);
+import { useState, useEffect } from "react";
+import style from "./VideoS.module.css";
+export default function VideoS({ socket }) {
+  const [camara, setCamara] = useState("");
+  useEffect(() => {
+    socket.on("imagen", (data) => {
+      var blob = new Blob([data], { type: "image/jpeg" });
+      setCamara(URL.createObjectURL(blob));
+    });
+  }, [socket]);
   return (
     <section className={style.videoS}>
-        <img src={camara} alt="auto" />
+      {camara ? <img src={camara} alt="auto" /> : <p>Esperando imagen...</p>}
+      {/* <img src={camara} alt="auto" /> */}
     </section>
-  )
+  );
 }
